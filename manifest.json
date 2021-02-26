@@ -1,0 +1,59 @@
+{
+  "author": "ggfwzs",
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "lib/sea.js",
+      "bg.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "popup.html",
+    "default_title": "zh_CN"
+  },
+  "content_scripts": [
+    {
+      "all_frames": false,
+      "js": [
+        "straightGoogle.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://ssl.google-analytics.com; object-src 'self'",
+  "default_locale": "zh_CN",
+  "description": "最简单易用的谷歌访问助手。可以访问google搜索，gmail邮箱，google+等谷歌服务。",
+  "icons": {
+    "128": "icons/icon-128.png",
+    "16": "icons/icon.png"
+  },
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh2QtNOshxAQEfJ7+vww5zn0ZmYi+HiZo0eTTYSkGpX4xdVAA5gCDQ6UYXDz7fGKoSlJoRp3EMm2VAoyMLvFFr14HOsVS4HCpyHamVUXYo1WI9XRTDoFsrlh+PvPmozkNc2390/8D+esJvNR3LNiQnGe6+Ov0/6qvUPKcHARrmKdXtjGppe5eqdWjSdhPzP5etQXjNmxaIwkIggu537BDdK74/Dpdk9CAZ2ksLBMm4GQqgHgcTYGLZhtgMaFThZ0HPiwQWeb0fD/Te3Uprh8xIsus3N6Lv+i0RrG6JLCoOZysICqS9ZMZX2xFN1C+qTDa6VA5L0cfDc9LJXA0cufvOQIDAQAB",
+  "manifest_version": 2,
+  "minimum_chrome_version": "33.14281.1000.0",
+  "name": "谷歌访问助手",
+  "options_page": "options.html",
+  "permissions": [
+    "proxy",
+    "tabs",
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "unlimitedStorage",
+    "notifications",
+    "\u003Call_urls>",
+    "http://*/*",
+    "https://*/*",
+    "ftp://*/*"
+  ],
+  "update_url": "https://edge.microsoft.com/extensionwebstorebase/v1/crx",
+  "version": "2.3.0",
+  "web_accessible_resources": [
+    "first.html"
+  ]
+}
